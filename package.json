@@ -1,7 +1,7 @@
 {
   "name": "vscode-attrs-sorter",
   "displayName": "Sorting HTML attributes",
-  "description": "Sorting of attributes in the HTML selector based on the given order",
+  "description": "The sorting attribute of the tag based on the given order",
   "version": "0.1.0",
   "publisher": "mrmlnc",
   "engines": {

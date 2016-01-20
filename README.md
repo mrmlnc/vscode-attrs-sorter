@@ -1,6 +1,6 @@
 # Sorting HTML attributes
 
-> VS Code plugin for [posthtml-attrs-sorter](https://github.com/mrmlnc/posthtml-attrs-sorter) — sorting of attributes in the selector based on the given order.
+> VS Code plugin for [posthtml-attrs-sorter](https://github.com/mrmlnc/posthtml-attrs-sorter) — sort attribute of the tag based on the given order.
 
 ![2016-01-21_01-05-29](https://cloud.githubusercontent.com/assets/7034281/12464661/24955f8c-bfdb-11e5-873d-a04ad0cf6aae.gif)
 
