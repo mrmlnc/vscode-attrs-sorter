@@ -1,0 +1,67 @@
+{
+  "name": "vscode-attrs-sorter",
+  "displayName": "Sorting HTML attributes",
+  "description": "Sorting of attributes in the HTML selector based on the given order",
+  "version": "0.1.0",
+  "publisher": "mrmlnc",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "icon": "icon.png",
+  "homepage": "https://github.com/mrmlnc/vscode-attrs-sorter",
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:attrsSorter.processEditor"
+  ],
+  "main": "./extension",
+  "contributes": {
+    "commands": [
+      {
+        "command": "attrsSorter.processEditor",
+        "title": "Sort the attributes of HTML selector (attrs-sorter)"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "AttrsSorter configuration",
+      "properties": {
+        "attrsSorter.order": {
+          "default": null,
+          "description": "An array of attributes in the correct order"
+        }
+      }
+    }
+  },
+  "dependencies": {
+    "posthtml": "^0.8.1",
+    "posthtml-attrs-sorter": "^0.1.0"
+  },
+  "devDependencies": {
+    "vscode": "0.10.x",
+    "xo": "^0.12.1"
+  },
+  "scripts": {
+    "test": "xo"
+  },
+  "xo": {
+    "rules": {
+      "arrow-parens": [
+        2,
+        "always"
+      ],
+      "object-curly-spacing": [
+        2,
+        "always"
+      ],
+      "space-before-function-paren": [
+        2,
+        "never"
+      ]
+    },
+    "envs": [
+      "node"
+    ]
+  }
+}
