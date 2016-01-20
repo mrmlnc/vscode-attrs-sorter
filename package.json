@@ -2,7 +2,7 @@
   "name": "vscode-attrs-sorter",
   "displayName": "Sorting HTML attributes",
   "description": "The sorting attribute of the tag based on the given order",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "publisher": "mrmlnc",
   "engines": {
     "vscode": "^0.10.1"
@@ -20,7 +20,7 @@
     "commands": [
       {
         "command": "attrsSorter.processEditor",
-        "title": "Sort the attributes of HTML selector (attrs-sorter)"
+        "title": "Sort attribute of the tag (attrs-sorter)"
       }
     ],
     "configuration": {
