@@ -12,6 +12,17 @@ To install, press `F1` and select `Extensions: Install Extensions` and then sear
 
 Press `F1` and run the command named `attrs-sorter`.
 
+## Keyboard shortcuts
+
+To add support for keyboard shortcuts, create a new rule in `File -> Preferences -> Keyboard Shortcuts`:
+
+```json
+{
+  "key": "ctrl+shift+c",
+  "command": "attrsSorter.processEditor"
+}
+```
+
 ## Supported settings
 
  * `attrsSorter.order` {Array} — An array of attributes in the correct order.
