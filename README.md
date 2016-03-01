@@ -14,7 +14,7 @@ Press `F1` and run the command named `attrs-sorter`.
 
 ## Keyboard shortcuts
 
-To add support for keyboard shortcuts, create a new rule in `File -> Preferences -> Keyboard Shortcuts`:
+For changes keyboard shortcuts, create a new rule in `File -> Preferences -> Keyboard Shortcuts`:
 
 ```json
 {
@@ -34,6 +34,10 @@ For example:
   "attrsSorter.order": ["data", "aria", "class"]
 }
 ```
+
+## Changelog
+
+See the [Releases section of our GitHub project](https://github.com/mrmlnc/vscode-attrs-sorter/releases) for changelogs for each release version.
 
 ## License
 
