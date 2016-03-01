@@ -2,7 +2,7 @@
   "name": "vscode-attrs-sorter",
   "displayName": "Sorting HTML attributes",
   "description": "Sorting of the tag attributes in the specified order",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "publisher": "mrmlnc",
   "engines": {
     "vscode": "^0.10.1"
