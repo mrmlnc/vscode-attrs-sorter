@@ -1,7 +1,7 @@
 {
   "name": "vscode-attrs-sorter",
   "displayName": "Sorting HTML attributes",
-  "description": "The sorting attribute of the tag based on the given order",
+  "description": "Sorting of the tag attributes in the specified order",
   "version": "0.1.2",
   "publisher": "mrmlnc",
   "engines": {
@@ -20,7 +20,7 @@
     "commands": [
       {
         "command": "attrsSorter.processEditor",
-        "title": "Sort attribute of the tag (attrs-sorter)"
+        "title": "Sorting of the tag attributes (attrs-sorter)"
       }
     ],
     "configuration": {
@@ -32,11 +32,16 @@
           "description": "An array of attributes in the correct order"
         }
       }
-    }
+    },
+    "keybindings": [{
+      "command": "attrsSorter.processEditor",
+      "key": "shift+alt+s",
+      "when": "editorTextFocus"
+    }]
   },
   "dependencies": {
-    "posthtml": "^0.8.1",
-    "posthtml-attrs-sorter": "^0.1.0"
+    "posthtml": "=0.8.3",
+    "posthtml-attrs-sorter": "=0.1.2"
   },
   "devDependencies": {
     "vscode": "0.10.x",
