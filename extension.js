@@ -22,13 +22,13 @@ function activate(context) {
 		}
 
 		// HTML
-		htmlSorter(documentText, options, function(err, result) {
+		htmlSorter(documentText, options, function(err, html) {
 			if (err) {
 				vscode.window.showWarningMessage(err);
 			}
 
 			textEditor.edit(function(editBuilder) {
-				editBuilder.replace(selectAll, result.html);
+				editBuilder.replace(selectAll, html);
 			});
 		});
 	});
