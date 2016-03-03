@@ -6,25 +6,25 @@ var jadeSorter = require('../lib/jade');
 
 describe('HTML', function() {
 	it('No attributes', function(done) {
-		htmlSorter('<span>Test</span>', {}, function(err, result) {
+		htmlSorter('<span>Test</span>', {}, function(err, html) {
 			assert.equal(err, null);
-			assert.equal(result.html, '<span>Test</span>');
+			assert.equal(html, '<span>Test</span>');
 			done();
 		});
 	});
 
 	it('One attribute', function(done) {
-		htmlSorter('<span class="class">Test</span>', {}, function(err, result) {
+		htmlSorter('<span class="class">Test</span>', {}, function(err, html) {
 			assert.equal(err, null);
-			assert.equal(result.html, '<span class="class">Test</span>');
+			assert.equal(html, '<span class="class">Test</span>');
 			done();
 		});
 	});
 
 	it('Multiple attributes', function(done) {
-		htmlSorter('<span id="id" class="class">Test</span>', {}, function(err, result) {
+		htmlSorter('<span id="id" class="class">Test</span>', {}, function(err, html) {
 			assert.equal(err, null);
-			assert.equal(result.html, '<span class="class" id="id">Test</span>');
+			assert.equal(html, '<span class="class" id="id">Test</span>');
 			done();
 		});
 	});
@@ -35,17 +35,17 @@ describe('HTML', function() {
 				'id',
 				'class'
 			]
-		}, function(err, result) {
+		}, function(err, html) {
 			assert.equal(err, null);
-			assert.equal(result.html, '<span id="id" class="class">Test</span>');
+			assert.equal(html, '<span id="id" class="class">Test</span>');
 			done();
 		});
 	});
 
 	it('Multiple rows', function(done) {
-		htmlSorter('<div id="id" class="class">\n  <span id="id" class="class">Test</span>\n  </div>', {}, function(err, result) {
+		htmlSorter('<div id="id" class="class">\n  <span id="id" class="class">Test</span>\n  </div>', {}, function(err, html) {
 			assert.equal(err, null);
-			assert.equal(result.html, '<div class="class" id="id">\n  <span class="class" id="id">Test</span>\n  </div>');
+			assert.equal(html, '<div class="class" id="id">\n  <span class="class" id="id">Test</span>\n  </div>');
 			done();
 		});
 	});
