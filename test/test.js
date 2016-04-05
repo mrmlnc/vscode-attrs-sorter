@@ -61,6 +61,11 @@ describe('Pug (ex. Jade)', function() {
 		var result = jadeSorter('span(class="class") Test', {});
 		assert.equal(result, 'span(class="class") Test');
 	});
+	
+	it('One attribute with the value of multiple words', function() {
+		var result = jadeSorter('a.class(href="#", title="one two three") Test', {});
+		assert.equal(result, 'a.class(href="#", title="one two three") Test');
+	});
 
 	it('Multiple attributes', function() {
 		var result = jadeSorter('span(id="id", class="class") Test', {});
