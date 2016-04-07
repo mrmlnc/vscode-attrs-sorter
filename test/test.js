@@ -113,8 +113,8 @@ describe('Pug (ex. Jade)', function() {
 	});
 
 	it('Attribute value in single quotes', function() {
-		var result = jadeSorter("span(id='id' class='class') Test", {});
-		assert.equal(result, "span(class='class' id='id') Test");
+		var result = jadeSorter(`span(id='id' class='class') Test`, {});
+		assert.equal(result, `span(class='class' id='id') Test`);
 	});
 
 	it('nested quotation marks', function() {
