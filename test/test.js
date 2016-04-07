@@ -61,7 +61,12 @@ describe('Pug (ex. Jade)', function() {
 		var result = jadeSorter('span(class="class") Test', {});
 		assert.equal(result, 'span(class="class") Test');
 	});
-	
+
+	it('Boolean attribute', function() {
+		var result = jadeSorter('input(class="class", required)', {});
+		assert.equal(result, 'input(class="class", required)');
+	});
+
 	it('One attribute with the value of multiple words', function() {
 		var result = jadeSorter('a.class(href="#", title="one two three") Test', {});
 		assert.equal(result, 'a.class(href="#", title="one two three") Test');
@@ -92,6 +97,11 @@ describe('Pug (ex. Jade)', function() {
 		assert.equal(result, 'nav.navbar-list\n  each href, item in _menu.navbar\n  a(href="#{href}", title="#{item}")= item');
 	});
 
+	it('Loop with sortable attrs', function() {
+		var result = jadeSorter('nav.navbar-list\n  each href, item in _menu.navbar\n  span(id="id", class="class")= item', {});
+		assert.equal(result, 'nav.navbar-list\n  each href, item in _menu.navbar\n  span(class="class", id="id")= item');
+	});
+
 	it('Splitting attributes with comma', function() {
 		var result = jadeSorter('span(id="id",class="class") Test', {});
 		assert.equal(result, 'span(class="class",id="id") Test');
@@ -100,5 +110,20 @@ describe('Pug (ex. Jade)', function() {
 	it('Splitting attributes with space', function() {
 		var result = jadeSorter('span(id="id" class="class") Test', {});
 		assert.equal(result, 'span(class="class" id="id") Test');
+	});
+
+	it('Attribute value in single quotes', function() {
+		var result = jadeSorter("span(id='id' class='class') Test", {});
+		assert.equal(result, "span(class='class' id='id') Test");
+	});
+
+	it('nested quotation marks', function() {
+		var result = jadeSorter(`.owl-item(style="background-image: url('../images/slider/header-bg-0.png')")`, {});
+		assert.equal(result, `.owl-item(style="background-image: url('../images/slider/header-bg-0.png')")`);
+	});
+
+	it('Expressions in attributes', function() {
+		var result = jadeSorter(`body(id='id', class="page-" + page.name)`, {});
+		assert.equal(result, `body(class="page-" + page.name, id='id')`);
 	});
 });
