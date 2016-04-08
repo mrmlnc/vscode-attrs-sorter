@@ -2,7 +2,7 @@
   "name": "vscode-attrs-sorter",
   "displayName": "Sorting HTML and Jade attributes",
   "description": "Sorting of the tag attributes in the specified order",
-  "version": "0.2.1",
+  "version": "1.0.0",
   "publisher": "mrmlnc",
   "engines": {
     "vscode": "^0.10.1"
