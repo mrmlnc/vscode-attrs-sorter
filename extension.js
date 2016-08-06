@@ -1,33 +1,33 @@
 'use strict';
 
-var vscode = require('vscode');
-var htmlSorter = require('./lib/html');
-var jadeSorter = require('./lib/jade');
+const vscode = require('vscode');
+const htmlSorter = require('./lib/html');
+const jadeSorter = require('./lib/jade');
 
 function activate(context) {
-	var processEditor = vscode.commands.registerTextEditorCommand('attrsSorter.processEditor', function(textEditor) {
-		var options = vscode.workspace.getConfiguration('attrsSorter') || {};
-		var document = textEditor.document;
-		var documentText = document.getText();
-		var lastLine = document.lineAt(document.lineCount - 1);
-		var selectAll = new vscode.Range(0, 0, lastLine.lineNumber, lastLine.range.end.character);
+	const processEditor = vscode.commands.registerTextEditorCommand('attrsSorter.processEditor', (textEditor) => {
+		const options = vscode.workspace.getConfiguration('attrsSorter');
+		const document = textEditor.document;
+		const documentText = document.getText();
+		const lastLine = document.lineAt(document.lineCount - 1);
+		const selectAll = new vscode.Range(0, 0, lastLine.lineNumber, lastLine.range.end.character);
 
 		// Jade
-		var lang = document.languageId || document._languageId;
+		const lang = document.languageId;
 		if (lang === 'jade') {
-			textEditor.edit(function(editBuilder) {
+			textEditor.edit((editBuilder) => {
 				editBuilder.replace(selectAll, jadeSorter(documentText, options));
 			});
 			return;
 		}
 
 		// HTML
-		htmlSorter(documentText, options, function(err, html) {
+		htmlSorter(documentText, options, (err, html) => {
 			if (err) {
 				vscode.window.showWarningMessage(err);
 			}
 
-			textEditor.edit(function(editBuilder) {
+			textEditor.edit((editBuilder) => {
 				editBuilder.replace(selectAll, html);
 			});
 		});
