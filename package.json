@@ -17,27 +17,20 @@
   ],
   "main": "./extension",
   "contributes": {
-    "commands": [
-      {
-        "command": "attrsSorter.processEditor",
-        "title": "Sorting of the tag attributes (attrs-sorter)"
-      }
-    ],
+    "commands": [{
+      "command": "attrsSorter.processEditor",
+      "title": "Sorting of the tag attributes (attrs-sorter)"
+    }],
     "configuration": {
       "type": "object",
       "title": "AttrsSorter configuration",
       "properties": {
         "attrsSorter.order": {
-          "default": null,
+          "default": {},
           "description": "An array of attributes in the correct order"
         }
       }
-    },
-    "keybindings": [{
-      "command": "attrsSorter.processEditor",
-      "key": "shift+alt+s",
-      "when": "editorTextFocus"
-    }]
+    }
   },
   "dependencies": {
     "posthtml": "0.9.0",
