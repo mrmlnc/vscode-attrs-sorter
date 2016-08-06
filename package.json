@@ -33,21 +33,23 @@
         }
       }
     },
-    "keybindings": [{
-      "command": "attrsSorter.processEditor",
-      "key": "shift+alt+s",
-      "when": "editorTextFocus"
-    }]
+    "keybindings": [
+      {
+        "command": "attrsSorter.processEditor",
+        "key": "shift+alt+s",
+        "when": "editorTextFocus"
+      }
+    ]
   },
   "dependencies": {
-    "posthtml": "=0.8.5",
+    "posthtml": "0.9.0",
     "posthtml-attrs-sorter": "=0.1.2",
-    "pug-lexer": "^1.0.0"
+    "pug-lexer": "^2.0.2"
   },
   "devDependencies": {
-    "mocha": "^2.4.5",
+    "mocha": "^3.0.1",
     "vscode": "0.11.x",
-    "xo": "^0.13.0"
+    "xo": "^0.16.0"
   },
   "scripts": {
     "test": "xo && mocha"
