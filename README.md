@@ -31,7 +31,7 @@ Press `F1` and run the command named `attrs-sorter`.
 **attrsSorter.order**
 
   * Type: `array`
-  * Default: `{}`
+  * Default: `[]`
 
 An array of attributes in the correct order.
 

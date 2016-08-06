@@ -12,6 +12,10 @@ function activate(context) {
 		const lastLine = document.lineAt(document.lineCount - 1);
 		const selectAll = new vscode.Range(0, 0, lastLine.lineNumber, lastLine.range.end.character);
 
+		if (!options.order.length) {
+			options.order = null;
+		}
+
 		// Jade
 		const lang = document.languageId;
 		if (lang === 'jade') {

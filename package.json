@@ -26,7 +26,8 @@
       "title": "AttrsSorter configuration",
       "properties": {
         "attrsSorter.order": {
-          "default": {},
+          "type": "array",
+          "default": [],
           "description": "An array of attributes in the correct order"
         }
       }
