@@ -4,11 +4,23 @@
   "description": "Sorting of the tag attributes in the specified order",
   "version": "1.3.0",
   "publisher": "mrmlnc",
+  "license": "MIT",
   "engines": {
     "vscode": "^1.3.0"
   },
   "icon": "icon.png",
-  "homepage": "https://github.com/mrmlnc/vscode-attrs-sorter",
+  "homepage": "https://github.com/mrmlnc/vscode-attrs-sorter/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mrmlnc/vscode-attrs-sorter"
+  },
+  "keywords": [
+    "html",
+    "jade",
+    "pug",
+    "attributes",
+    "sort"
+  ],
   "categories": [
     "Other"
   ],
@@ -17,12 +29,10 @@
   ],
   "main": "./extension",
   "contributes": {
-    "commands": [
-      {
-        "command": "attrsSorter.processEditor",
-        "title": "Sorting of the tag attributes (attrs-sorter)"
-      }
-    ],
+    "commands": [{
+      "command": "attrsSorter.processEditor",
+      "title": "Sorting of the tag attributes (attrs-sorter)"
+    }],
     "configuration": {
       "type": "object",
       "title": "AttrsSorter configuration",
