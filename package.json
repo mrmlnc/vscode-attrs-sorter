@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "posthtml": "0.9.0",
-    "posthtml-attrs-sorter": "0.1.3",
+    "posthtml-attrs-sorter": "0.1.4",
     "pug-lexer": "2.2.1"
   },
   "devDependencies": {
