@@ -19,7 +19,8 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 
 ## Usage
 
-Press `F1` and run the command named `attrs-sorter`.
+  * You can use global keyboard shortcut <kbd>ALT+SHIFT+F</kbd> or right-click context menu `Format code`.
+  * Or press <kbd>F1</kbd> and run the command named `Sorting of the tag attributes (attrs-sorter)`.
 
 ## Supported languages
 
@@ -30,7 +31,7 @@ Press `F1` and run the command named `attrs-sorter`.
 
 **attrsSorter.order**
 
-  * Type: `array`
+  * Type: `string[]`
   * Default: `[]`
 
 An array of attributes in the correct order.
