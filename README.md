@@ -50,7 +50,7 @@ For changes keyboard shortcuts, create a new rule in `File -> Preferences -> Key
 ```json
 {
   "key": "ctrl+shift+c",
-  "command": "attrsSorter.processEditor"
+  "command": "attrsSorter.execute"
 }
 ```
 

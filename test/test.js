@@ -5,48 +5,38 @@ const htmlSorter = require('../lib/html');
 const jadeSorter = require('../lib/jade');
 
 describe('HTML', () => {
-	it('No attributes', (done) => {
-		htmlSorter('<span>Test</span>', {}, (err, html) => {
-			assert.equal(err, null);
-			assert.equal(html, '<span>Test</span>');
-			done();
+	it('No attributes', () => {
+		return htmlSorter('<span>Test</span>', {}).then((result) => {
+			assert.equal(result.html, '<span>Test</span>');
 		});
 	});
 
-	it('One attribute', (done) => {
-		htmlSorter('<span class="class">Test</span>', {}, (err, html) => {
-			assert.equal(err, null);
-			assert.equal(html, '<span class="class">Test</span>');
-			done();
+	it('One attribute', () => {
+		return htmlSorter('<span class="class">Test</span>', {}).then((result) => {
+			assert.equal(result.html, '<span class="class">Test</span>');
 		});
 	});
 
-	it('Multiple attributes', (done) => {
-		htmlSorter('<span id="id" class="class">Test</span>', {}, (err, html) => {
-			assert.equal(err, null);
-			assert.equal(html, '<span class="class" id="id">Test</span>');
-			done();
+	it('Multiple attributes', () => {
+		return htmlSorter('<span id="id" class="class">Test</span>', {}).then((result) => {
+			assert.equal(result.html, '<span class="class" id="id">Test</span>');
 		});
 	});
 
-	it('Multiple attributes with options', (done) => {
-		htmlSorter('<span id="id" class="class">Test</span>', {
+	it('Multiple attributes with options', () => {
+		return htmlSorter('<span id="id" class="class">Test</span>', {
 			order: [
 				'id',
 				'class'
 			]
-		}, (err, html) => {
-			assert.equal(err, null);
-			assert.equal(html, '<span id="id" class="class">Test</span>');
-			done();
+		}).then((result) => {
+			assert.equal(result.html, '<span id="id" class="class">Test</span>');
 		});
 	});
 
-	it('Multiple rows', function(done) {
-		htmlSorter('<div id="id" class="class">\n  <span id="id" class="class">Test</span>\n  </div>', {}, function(err, html) {
-			assert.equal(err, null);
-			assert.equal(html, '<div class="class" id="id">\n  <span class="class" id="id">Test</span>\n  </div>');
-			done();
+	it('Multiple rows', function() {
+		return htmlSorter('<div id="id" class="class">\n  <span id="id" class="class">Test</span>\n  </div>', {}).then((result) => {
+			assert.equal(result.html, '<div class="class" id="id">\n  <span class="class" id="id">Test</span>\n  </div>');
 		});
 	});
 });
