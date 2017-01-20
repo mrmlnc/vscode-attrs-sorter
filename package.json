@@ -50,7 +50,7 @@
     }
   },
   "dependencies": {
-    "posthtml": "0.9.1",
+    "posthtml": "0.9.2",
     "posthtml-attrs-sorter": "1.0.0",
     "pug-lexer": "2.3.0"
   },
