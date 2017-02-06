@@ -50,13 +50,13 @@
     }
   },
   "dependencies": {
-    "posthtml": "0.9.1",
+    "posthtml": "0.9.2",
     "posthtml-attrs-sorter": "1.0.0",
-    "pug-lexer": "2.3.0"
+    "pug-lexer": "3.0.0"
   },
   "devDependencies": {
-    "@types/mocha": "^2.2.33",
-    "@types/node": "0.0.2",
+    "@types/mocha": "^2.2.39",
+    "@types/node": "7.0.5",
     "mocha": "^3.2.0",
     "vscode": "^1.0.3",
     "xo": "^0.17.1"
