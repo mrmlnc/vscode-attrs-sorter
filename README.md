@@ -1,4 +1,4 @@
-# Sorting HTML and Jade attributes
+# Sorting HTML and Pug/Jade attributes
 
 > Sorting of the tag attributes in the specified order.
 
@@ -10,9 +10,17 @@
 
 ![2016-03-03_16-23-51](https://cloud.githubusercontent.com/assets/7034281/13495537/5f4fb1b6-e15c-11e5-8f55-fc8e2d60053c.gif)
 
+## Donate
+
+If you want to thank me, or promote your Issue.
+
+[![Gratipay User](https://img.shields.io/gratipay/user/mrmlnc.svg?style=flat-square)](https://gratipay.com/~mrmlnc)
+
+> Sorry, but I have work and support for plugins requires some time after work. I will be glad of your support.
+
 ## Install
 
-  * Press `F1` and select `Extensions: Install Extensions`.
+  * Press <kbd>F1</kbd> and `select Extensions: Install Extensions`.
   * Search for and select `attrs-sorter`.
 
 See the [extension installation guide](https://code.visualstudio.com/docs/editor/extension-gallery) for details.
@@ -32,15 +40,15 @@ See the [extension installation guide](https://code.visualstudio.com/docs/editor
 **attrsSorter.order**
 
   * Type: `string[]`
-  * Default: `[]`
+  * Default: http://codeguide.co/#html-attribute-order
 
-An array of attributes in the correct order.
+An array of attributes in the correct order. See [posthtml-attrs-sorter#order](https://github.com/mrmlnc/posthtml-attrs-sorter#order) for more details.
 
 For example:
 
 ```json
 {
-  "attrsSorter.order": ["data", "aria", "class"]
+  "attrsSorter.order": ["data-.+", "aria-.+", "class"]
 }
 ```
 
