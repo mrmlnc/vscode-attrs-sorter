@@ -59,7 +59,7 @@
     "@types/node": "7.0.5",
     "mocha": "^3.2.0",
     "vscode": "^1.0.3",
-    "xo": "^0.17.1"
+    "xo": "^0.19.0"
   },
   "scripts": {
     "postinstall": "node ./node_modules/vscode/bin/install",
