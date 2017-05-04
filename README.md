@@ -1,5 +1,7 @@
 # Sorting HTML and Pug/Jade attributes
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/mrmlnc/vscode-attrs-sorter.svg)](https://greenkeeper.io/)
+
 > Sorting of the tag attributes in the specified order.
 
 ## HTML
