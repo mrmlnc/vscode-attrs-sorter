@@ -63,7 +63,8 @@ function showOutput(msg) {
 function activate(context) {
 	const supportedDocuments = [
 		{ language: 'html', scheme: 'file' },
-		{ language: 'jade', scheme: 'file' }
+		{ language: 'jade', scheme: 'file' },
+		{ language: 'svelte', scheme: 'file' }
 	];
 
 	const command = vscode.commands.registerTextEditorCommand('attrsSorter.execute', (textEditor) => {
